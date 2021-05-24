@@ -1,0 +1,271 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title></title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"> -->
+
+</head>
+
+<body>
+
+<!-- 2. Write a JS function and ask for user DOB ex: 10/June/1998 and if user age is between 18 to 44 then this link should be open automatically in browser https://selfregistration.cowin.gov.in”. -->
+
+    <!-- here format is: 2000/12/12 -->
+    <!-- <label for="birthday">Date of Birth:</label> <br>
+    <input type="text" id="birth_date" name="birth_date" onkeyup="calculate_age()">
+    <br>
+    <br>
+    <p id="calculated_age"></p> -->
+
+    <center>  
+    <h2 style="color: #32A80F" align="center"> Calculate Age from Date of Birth <br> <br> </h2>   
+      
+    <!-- Choose a date and enter in input field -->  
+    <b> Enter Date of Birth: <input type=date id = DOB> </b>  
+    <span id = "message" style="color:red"> </span> <br><br>    
+      
+    <!-- Choose a date and enter in input field -->  
+    <button type="submit" onclick = "ageCalculator()"> Calculate age </button> <br><br>  
+    <h3 style="color:#32A80F" id="result" align="center"></h3>   
+    </center> 
+
+
+
+
+    <script type="text/javascript">
+// 1. Write a Javascript program to take three numbers from the user as input and print the largest number on the document.
+
+        // var a = prompt("please enter 1st number: ");
+        // var b = prompt("please enter 2nd number: ");
+        // var c = prompt("please enter 3rd number: ");
+        // var result = Math.max(a, b, c);
+        // document.write(result + "<br>");
+
+
+// 2. Write a JS function and ask for user DOB ex: 10/June/1998 and if user age is between 18 to 44 then this link should be open automatically in browser https://selfregistration.cowin.gov.in”.
+
+    
+    
+    // function ageCalculator() {  
+    //     var userinput = document.getElementById("DOB").value;  
+    //     var dob = new Date(userinput);  
+    //     if(userinput==null || userinput=='') {  
+    //       document.getElementById("message").innerHTML = "**Choose a date please!";    
+    //       return false;   
+    //     } else {  
+          
+    //     //calculate month difference from current date in time  
+    //     var month_diff = Date.now() - dob.getTime();  
+          
+    //     //convert the calculated difference in date format  
+    //     var age_dt = new Date(month_diff);   
+          
+    //     //extract year from date      
+    //     var year = age_dt.getUTCFullYear();  
+          
+    //     //now calculate the age of the user  
+    //     var age = Math.abs(year - 1970);  
+          
+    //     //display the calculated age  
+    //     return document.getElementById("result").innerHTML =    
+    //              "Age is: " + age + " years. ";  
+    //     }  
+    //     if (age > 18 && age < 44) {
+    //         window.location.href = "https://selfregistration.cowin.gov.in";
+    //     } else {
+    //         console.log('You are not eligible');
+    //     }
+    // }  
+
+
+    
+
+// 3.Write a JavaScript program function to convert temperatures from Celsius, Fahrenheit and Fahrenheit to Celsius as per user arguments provide in functions
+
+    // function cToF(celsius) 
+    // {
+    //   var cTemp = celsius;
+    //   var cToFahr = cTemp * 9 / 5 + 32;
+    //   var message = cTemp+'\xB0C is ' + cToFahr + ' \xB0F.';
+    //     document.write(message);
+    // }
+
+    // function fToC(fahrenheit) 
+    // {
+    //   var fTemp = fahrenheit;
+    //   var fToCel = (fTemp - 32) * 5 / 9;
+    //   var message = fTemp+'\xB0F is ' + fToCel + '\xB0C.';
+    //     document.write(message);
+    // } 
+    // cToF(60);
+    // document.write("<br><br>");
+    // fToC(45);
+
+// 4. Write a JavaScript program to check whether a given integer is within range of 50-100 or not.
+
+    // var x = prompt("please enter number: ");
+    // if (x >= 50 && x <= 99)
+    //     {
+    //         // return true;
+    //         document.write("You are within range of 50-100");
+    //     } else 
+    //       {
+    //         // return false;
+    //         document.write("You aren't within range of 50-100");
+    // }
+
+
+// 5. Write a JavaScript program to reverse a given string and also check if string is palindrome or not.
+
+    // // program to check if the string is palindrome or not
+
+    // function check_Palindrome(str_entry){
+    // // Change the string into lower case and remove  all non-alphanumeric characters
+    //     var cstr = str_entry.toLowerCase().replace(/[^a-zA-Z0-9]+/g,'');
+    //     var ccount = 0;
+    // // Check whether the string is empty or not
+    //     if(cstr==="") {
+    //         console.log("Nothing found!");
+    //         return false;
+    //     }
+    // // Check if the length of the string is even or odd 
+    //     if ((cstr.length) % 2 === 0) {
+    //         ccount = (cstr.length) / 2;
+    //     } else {
+    // // If the length of the string is 1 then it becomes a palindrome
+    //         if (cstr.length === 1) {
+    //             console.log("Entry is a palindrome.");
+    //             return true;
+    //         } else {
+    // // If the length of the string is odd ignore middle character
+    //             ccount = (cstr.length - 1) / 2;
+    //         }
+    //     }
+    // // Loop through to check the first character to the last character and then move next
+    //     for (var x = 0; x < ccount; x++) {
+    // // Compare characters and drop them if they do not match 
+    //         if (cstr[x] != cstr.slice(-1-x)[0]) {
+    //             document.write("Entry is not a palindrome.");
+    //             return false;
+    //         }
+    //     }
+    //     document.write("The entry is a palindrome.");
+    //     return true;
+    // }
+    // check_Palindrome('madam');
+    // document.write("<br><br>");
+    // check_Palindrome('nurses run');
+    // document.write("<br><br>");
+    // check_Palindrome('fox');
+
+
+// 6.Write a JavaScript program to pass a 'JavaScript function' as parameter.
+
+    // function addStudent(id, refreshCallback)
+    // {
+    //     refreshCallback();  
+    // }
+
+    // function refreshStudentList() {
+    //     document.write('Hello');
+    // }
+
+    // addStudent(1, refreshStudentList);
+
+// 7. Write a JavaScript function to remove HTML/XML tags from
+// string.
+// Test Data:
+// console.log(strip_tags('<p><strong><em>SkillSanta Assignments</em></strong></p>'));
+    
+       // function removeTags(str) {
+       //    if ((str===null) || (str===''))
+       //    return false;
+       //    else
+       //    str = str.toString();
+       //    return str.replace( /(<([^>]+)>)/ig, '');
+       // }
+       // document.write(removeTags('<html> <body> Javascript<body> is not Java'));;
+
+
+// 8. Write a JavaScript for loop that will iterate from 20 to 30. For each iteration, it will check if the current number is odd or even, and display a message to the screen
+    // for (var x= 20; x<= 30; x++) {
+    //         if (x === 0) {
+    //                 document.write(x +  " is even" + "<br>");
+    //         }
+    //         else if (x % 2 === 0) {
+    //                 document.write(x + " is even" + "<br>");   
+    //         }
+    //         else {
+    //                 document.write(x + " is odd" + "<br>");
+    //         }
+    // }
+
+// 9. Write a JavaScript function to find the unique elements from two arrays.
+
+    
+  
+    // function difference(arr1,arr2) {
+      
+    // var a1= flatten(arr1,true);
+    // var a2= flatten(arr2,true);
+      
+    // var a=[], diff=[];
+    //     for(var i=0;i< a1.length;i++)
+    //         a[a1[i]]=false;
+    //     for(i=0;i< a2.length;i++)
+    //     if(a[a2[i]]===true) 
+    //         { delete a[a2[i]];}
+    //         else a[a2[i]]=true;
+    //     for(var k in a)
+    //         diff.push(k);
+    //     return diff;   
+    //     }
+
+    // var flatten = function(a, shallow,r){
+    //     if(!r){ r = [];}
+    //     if (shallow) {
+    //     return r.concat.apply(r,a);
+    //     }  
+    //     for(i=0; i< a.length; i++){
+    //         if(a[i].constructor == Array){
+    //             flatten(a[i],shallow,r);
+    //         }else{
+    //             r.push(a[i]);
+    //         }
+    //     }
+    //     return r;
+    // };
+    // document.write(difference([1, 2, 3], [100, 2, 1, 10]));
+
+// 10. Write a JS function to find out the number of vowels from a user input string.
+    
+    // function vowel_count(str1)
+    // {
+    //     var vowel_list = 'aeiouAEIOU';
+    //     var vcount = 0;
+      
+    //     for(var x = 0; x < str1.length ; x++)
+    //     {
+    //         if (vowel_list.indexOf(str1[x]) !== -1)
+    //         {
+    //           vcount += 1;
+    //         }
+      
+    //     }
+    //     return vcount;
+    // }
+    // document.write(vowel_count("Hey This is Skillsanta JS Training"));
+
+
+    
+    </script>
+
+
+</body>
+
+</html>
